@@ -1,0 +1,147 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar styles  */
+.navbar {
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    position: fixed;
+}
+
+.logo a{
+    color: rgb(118, 214, 163);
+    max-height: 60px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.logo a:hover{
+    transform: scale();
+}
+form {
+    position: relative;
+}
+
+form input {
+    padding: 5px;
+    width: 100%;
+    outline: none;
+    padding: 10px;
+    padding-right: 40px;
+    font-size: larger;
+    border-radius: 50px;
+}
+
+form button {
+    position: absolute;
+    top: 0%;
+    width: 20%;
+    height: 100%;
+    right: 0%;
+    background-color: rgb(118, 214, 163);
+    color: white;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    outline: none;
+}
+
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: x-large;font-weight: bold;
+}
+
+.nav-links li a:hover {
+    color: #40e0f5;
+}
+.checkbox-btn {
+    padding: 5px;
+    font-size: larger;
+    color: rgb(254, 255, 255);
+    display: none;
+    cursor: pointer;
+
+}
+
+.checkbox-btn:hover {
+    color: #40e0f5;
+}
+
+#check {
+    display: none;
+}
+
+/* nav-bar styles for tablet and mobiles */
+
+@media screen and (max-width:800px) {
+    .nav-links {
+        position: fixed;
+        flex-direction: column;
+        left:0;
+        top:80px;
+        width:50%;
+        text-align: center;
+        gap:60px;
+        background-color: #333;
+        height:40vh;
+        padding-top: 50px;
+        transition: all 0.5s;
+    }
+       
+    .checkbox-btn{
+        display: block;
+        font-size:x-large ;
+
+    }
+    #check:checked ~ .nav-links{left:-100%;
+    color: aquamarine;}
+    /* category products tap&mobile */
+    
+}
+
+/* category products */
+.catagorydiv img{
+    
+    height:100px;
+    width:100px;
+}
+.catagorydiv{display:flex;
+    width:100%;
+gap:100px;
+padding-top: 100px;
+justify-content: space-between;
+overflow-x:auto;
+
+}
+.catagorydiv.container{background-color: rgb(72, 9, 9);}
+.catagorydiv a{text-decoration: none;
+text-align: center;
+color:black ;
+}
+.catagorydiv h2{padding: 10px;}
+.catagorydiv::-webkit-scrollbar{width: 0px;}
+/* auto slide bar  */
+.autoslide{
+    display: flex;
+    overflow-x:auto ;
+     gap:200px;
+}
+.autoslide::-webkit-scrollbar{width:0px;}
+.autoslide .slideimg{background-color: #40e0f5;}
